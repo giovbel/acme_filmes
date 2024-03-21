@@ -3,13 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./src/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="bg-black-500 w-full h-full"></div>
+<body class="bg-[#1E0D50] w-full h-full overflow-hidden">
+
+  <header class="flex gap-40 pt-5 pl-10 place-items-center">
+    <img src="./img/logo.png" alt="">
+
+
+    <h2 class="text-white">INICIAL</h2>
+    <h2 class="text-white">FILMES</h2>
+    <h2 class="text-white">GÊNEROS</h2>
+    <h2 class="text-white">MEUS FILMES</h2>
+
+    <input type="text" class="w-80 px-4 py-2 rounded-lg border-gray-300" placeholder="Encontre seu filme" ></input>
+
+    <div class="h-16 w-16 bg-white rounded-full"></div>
+
+  </header>
+
+  <main class="h-25 relative grid gap-20 pt-5">
+    <div class="h-25 w-full bg-[#494E7A]">
+      <img src="./img/image 1.png" alt="foto do filme" class="w-full h-full"></img>
+      <div class="absolute inset-0 bg-[#262121] opacity-85"></div>
+    </div>
+
+    <div class="h-25 w-full bg-[#494E7A]">
+      
+    </div>
+  </main>
+
 </body>
 </html>
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
