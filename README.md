@@ -40,7 +40,7 @@ Níveis | Desempenho | Nota
 
 Protótipo | FRONT-END | Landing Page | CMS
 ----------|-----------|--------------|-----
-[[Figma][link1](https://www.figma.com/file/qimDnravXOQWm2zwpBJeNe/Filmes?type=design&node-id=1-3&mode=design&t=KaJBgXBNWtplyAoc-0)] | [projeto][link2] | [gitPreview][link3] | [link][link3] 
+[[Figma][https://www.figma.com/file/qimDnravXOQWm2zwpBJeNe/Filmes?type=design&node-id=1-3&mode=design&t=KaJBgXBNWtplyAoc-0] | [projeto][link2] | [gitPreview][link3] | [link][link3] 
 
 
 [link1]: https://www.figma.com/
