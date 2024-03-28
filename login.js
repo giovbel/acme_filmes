@@ -11,10 +11,10 @@
       return false;
     }
 
-    var emailAutenticado = 'email@example.com';
-    var senhaAutenticada = 'senha123';
+    var emailInvalido = 'email@example.com';
+    var senhaInvalido = 'senha123';
 
-    if (email !== emailAutenticado || senha !== senhaAutenticada) {
+    if (email !== emailInvalido || senha !== senhaInvalido) {
       alert('Informações inválidas. Por favor, tente novamente.');
       return false;
     }
