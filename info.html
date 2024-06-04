@@ -4,16 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./info.js" defer></script>
 </head>
 <body class="bg-[#1E0D50] w-full h-[100vh] overflow-hidden">
+
+  <style>
+    .movie-info {
+        display: none;
+    }
+    .movie:hover .movie-info {
+        display: block;
+    }
+</style>
 
   <header class="flex gap-40 pt-5 pl-5 place-items-center pb-10">
     <img src="./img/logo.png" alt="">
 
 <h2 class="text-white"><a href="./home.html" class="text-white">INICIAL</a></h2>
-<h2 class="text-white"><a href="./filmes.html" class="text-white">FILMES</a></h2>
-<h2 class="text-white"><a href="" class="text-white">GÊNEROS</a></h2>
-<h2 class="text-white"><a href="./salvos.html" class="text-white">ATORES</a></h2>
+
+<div class="relative ">
+  <h2 class="text-white cursor-pointer " onclick="toggleGenresMenu()">GÊNEROS</h2>
+  <div id="genresMenu" class="z-[99] absolute bg-[#000034] shadow-md py-2 rounded-lg hidden right-0 mt-2 w-40">
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">AÇÃO</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">COMÉDIA</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">DRAMA</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">DOCUMENTÁRIO</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">FANTASIA</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">FICÇÃO CIENTÍFICA</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">MUSICAL</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">FILME POLICIAL</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">ROMANCE</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">TERROR</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">SUSPENSE</a>
+  </div>
+</div>
+
+<h2 class="text-white"><a href="./atores.html" class="text-white">ATORES</a></h2>
 
     <input type="text" class="w-80 px-4 py-2 rounded-lg border-gray-300 outline-none" placeholder="Encontre seu filme" ></input>
 
@@ -24,7 +50,55 @@
 
     <div class="bg-[#000034] h-[90vh] w-full flex justify-center items-center">
 
-        <div class="h-[70vh] w-2/5 border-gray-800 bg-cover bg-center bg-white  bg-no-repeat " style="background-image: url(./img/image\ 1.png);">
+        <div class="h-[70vh] w-2/5 border-4 border-white bg-cover bg-center bg-white  bg-no-repeat " style="background-image: url(./img/image\ 1.png);">
+
+          <div class="pl-5 bg-black w-full h-full opacity-70 grid">
+
+            <div class="">
+              <div class="flex justify-between pr-6 pt-5 ">
+                <h1 class="text-white text-4xl">Coraline e o mundo Secreto</h1>
+            <img src="./img/adicionar a lista.png" alt="">
+              </div>
+              
+            <span class="text-white text-xl">Animação / Terror</span>
+            </div>
+            
+            <p class="text-white text-xl w-[30vw]">Enquanto explora sua nova casa à noite, a pequena Coraline descobre uma porta secreta que contém um mundo parecido com o dela, porém melhor em muitas maneiras. Todos têm botões no lugar dos olhos, os pais são carinhosos e os sonhos de Coraline viram realidade por lá. </p>
+
+            <div>
+              <div class="flex gap-2">
+                <span class="text-[#79AFFF]">Duração:</span> <span class="text-white"> 1 hora e 40 minutos</span>
+              </div>
+              
+              <div class="flex gap-2">
+                <span class="text-[#79AFFF]">Classificação:</span> <span class="text-white"> 10 anos</span>
+              </div>
+              
+              <div class="flex gap-2">
+                <span class="text-[#79AFFF]">Data de Lançamento:</span> <span class="text-white">13 de fevereiro de 2009</span>
+              </div>
+              
+              <div class="flex gap-2">
+                <span class="text-[#79AFFF]">Direção:</span> <span class="text-white"> Henry Selick</span>
+              </div>
+            
+              <div class="flex gap-2">
+                <span class="text-[#79AFFF]">Elenco:</span> <span class="text-white"> Dakota Fanning, Jennifer Saunders, Teri Hatcher, Ian McShane</span>
+              </div>
+              
+            </div>
+            
+            <div class="flex gap-10">
+  
+              <a href="" class="bg-white w-40 h-10 rounded-lg flex items-center gap-3 pl-2">
+                <img class="size-10" src="./img/icons8_buy (1).png" alt="">
+                <h3>R$ 20, 00</h3>
+              </a>
+            </div>
+            
+
+          </div>
+
         </div>
 
     </div>

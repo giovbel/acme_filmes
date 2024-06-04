@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="home.js" defer></script>
+</head>
+
+<body class="bg-[#1E0D50] w-full h-full">
+
+    <style>
+        .movie-info {
+            display: none;
+            color: #ffffff;
+        }
+
+        .movie:hover .movie-info {
+            display: block;
+            color: #ffffff;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #000034;
+            color: #ffffff;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            z-index: 10;
+            width: 200px;
+            right: 0;
+            left: auto;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.5rem;
+        }
+    </style>
+
+
+    <header class="flex gap-40 pt-5 pl-5 place-items-center pb-10">
+        <img src="./img/logo.png" alt="">
+
+
+        <h2 class="text-white"><a href="./home.html" class="text-white">INICIAL</a></h2>
+
+        <div class="relative">
+            <h2 class="text-white cursor-pointer" onclick="toggleGenresMenu()">GÊNEROS</h2>
+            <div id="genresMenu" class="absolute bg-[#000034] shadow-md py-2 rounded-lg hidden right-0 mt-2 w-40">
+                <a href="generos.html"
+                    class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">AÇÃO</a>
+                <a href="generos.html"
+                    class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">COMÉDIA</a>
+                <a href="generos.html"
+                    class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">DRAMA</a>
+                <a href="generos.html"
+                    class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">DOCUMENTÁRIO</a>
+                <a href="generos.html"
+                    class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">FANTASIA</a>
+                <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">FICÇÃO
+                    CIENTÍFICA</a>
+                <a href="generos.html"
+                    class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">MUSICAL</a>
+                <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">FILME
+                    POLICIAL</a>
+                <a href="generos.html"
+                    class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">ROMANCE</a>
+                <a href="generos.html"
+                    class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">TERROR</a>
+                <a href="generos.html"
+                    class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">SUSPENSE</a>
+            </div>
+        </div>
+
+        <h2 class="text-white"><a href="./atores.html" class="text-white">ATORES</a></h2>
+
+        <input type="text" class="w-80 px-4 py-2 rounded-lg border-gray-300 outline-none"
+            placeholder="Encontre seu filme"></input>
+
+        <div class="relative">
+            <div id="profile-icon" class="h-16 w-16 bg-white rounded-full cursor-pointer"></div>
+            <div id="dropdown-menu" class="dropdown-menu">
+                <a href="./perfil.html" class="hover:text-gray-300">Meu Perfil</a>
+                <a href="./filmes.html" class="hover:text-gray-300">Meus Filmes</a>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main class="grid place-content-center">
+        <div class="h-[40vh] w-[50vw] bg-[#3C548F] border-4 border-[#8264DB]-500/100 grid place-items-center">
+            <div class="flex gap-10">
+                <div class="h-[35vh] w-[12vw] bg-black">
+                    <img src="" alt="">
+                </div>
+    
+                <div class="grid">
+                    <h1 class="text-white text-3xl">Peyton Elizabeth Lee</h1>
+    
+                    <p class="text-white w-[20vw]">Peyton Elizabeth Lee é uma atriz estadunidense. Ela é conhecida por ter feito parte do elenco de Andi Mack, interprentando o papel titular.</p>
+
+
+                    <div>
+                        <div class="flex gap-2">
+                            <h2 class="text-white">Data de nascimento:</h2>
+                            <p class="text-white">12/05/07</p>
+                            </div>
+                            
+                            <div class="flex gap-2">
+                                <h2 class="text-white">Nacionalidade:</h2>
+                            <p class="text-white">americano(a)</p>
+                            </div>
+                    </div>
+                    
+                    
+    
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <footer class="grid place-items-center pt-5 gap-5">
+        <h1 class="text-white text-xl">FILMES</h1>
+        <div class="flex justify-center w-full gap-5">
+            <a href="./info.html">
+                <div class="h-[25vh] w-[8vw] bg-black"></div>
+            </a>
+
+            <a href="./info.html">
+                <div class="h-[25vh] w-[8vw] bg-black"></div>
+            </a>
+
+            <a href="./info.html">
+                <div class="h-[25vh] w-[8vw] bg-black"></div>
+            </a>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

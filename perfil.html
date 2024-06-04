@@ -4,40 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="home.js" defer></script>
     <title>Meu Perfil</title>
 </head>
 <body class="bg-[#1E0D50] w-full h-screen">
+  <style>
+    .movie-info {
+        display: none;
+        color: #ffffff;
+    }
+    .movie:hover .movie-info {
+        display: block;
+        color: #ffffff;
+    }
 
-    <header class="flex gap-40 pt-5 pl-5 place-items-center pb-10 h-32">
-      <img src="./img/logo.png" alt="">
-  
-  
-      <h2 class="text-white">INICIAL</h2>
-      <h2 class="text-white">FILMES</h2>
-      <h2 class="text-white">GÊNEROS</h2>
-      <h2 class="text-white">MEUS FILMES</h2>
-  
-      <input type="text" class="w-80 px-4 py-2 rounded-lg border-gray-300 outline-none" placeholder="Encontre seu filme" ></input>
-  
-      <div class="h-16 w-16 bg-white rounded-full"></div>
-  
-    </header>
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #000034;
+      color: #ffffff;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      z-index: 10;
+      width: 200px;
+      right: 0; 
+      left: auto;
+    }
 
-    <main class="h-screen w-full bg-[#BCA5FF] border-4 border-[#CDB9B9]-500/100 grid place-items-center">
+    .dropdown-menu a {
+      display: block;
+      padding: 0.5rem;
+    }
+</style>
 
-      <div class="grid place-content-center gap-6 place-items-center">
 
-        <div class="h-32 w-32 bg-gray-100 rounded-full "></div>
-        <h2>NOME DE USUÁRIO</h2>
-        <div class="w-80 h-14 bg-black border-4 border-[#CDB9B9]-500/100"></div>
-        <div class="w-80 h-14 bg-black border-4 border-[#CDB9B9]-500/100"></div>
-        <div class=""></div>
-  
-        <a href=""></a>
-        <a href=""></a>
-   
+  <header class="flex gap-40 pt-5 pl-5 place-items-center pb-10">
+    <img src="./img/logo.png" alt="">
+
+
+<h2 class="text-white"><a href="./home.html" class="text-white">INICIAL</a></h2>
+
+<div class="relative">
+  <h2 class="text-white cursor-pointer" onclick="toggleGenresMenu()">GÊNEROS</h2>
+  <div id="genresMenu" class="absolute bg-[#000034] shadow-md py-2 rounded-lg hidden right-0 mt-2 w-40">
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">AÇÃO</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">COMÉDIA</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">DRAMA</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">DOCUMENTÁRIO</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">FANTASIA</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">FICÇÃO CIENTÍFICA</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">MUSICAL</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">FILME POLICIAL</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">ROMANCE</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">TERROR</a>
+    <a href="generos.html" class="block px-4 py-2 text-gray-800 hover:bg-[#110656] hover:text-white">SUSPENSE</a>
+  </div>
+</div>
+
+<h2 class="text-white"><a href="./atores.html" class="text-white">ATORES</a></h2>
+
+    <input type="text" class="w-80 px-4 py-2 rounded-lg border-gray-300 outline-none" placeholder="Encontre seu filme" ></input>
+
+    <div class="relative">
+      <div id="profile-icon" class="h-16 w-16 bg-white rounded-full cursor-pointer"></div>
+      <div id="dropdown-menu" class="dropdown-menu">
+        <a href="./perfil.html" class="hover:text-gray-300">Meu Perfil</a>
+        <a href="./filmes.html" class="hover:text-gray-300">Meus Filmes</a>
       </div>
-    
+
+  </header>
+    <main class="h-[83vh] w-full bg-[#BCA5FF] border-4 border-[#8264DB]-500/100 grid place-items-center">
+
+      <h1 class="text-white">MEU PERFIL</h1>
+
+      <div class=" place-content-center flex gap-6 place-items-center">
+
+        
+          
+        <div id="profile-container" class="flex flex-col items-center justify-center">
+          <div class="h-40 w-40 bg-gray-100 rounded-full flex items-center justify-center">
+              <img id="profile-image" src="./img/ph_camera-light.png" alt="Foto de Perfil" class="h-full w-full rounded-full object-cover">
+          </div>
+          <h2 class="text-white text-xl">NOME DE USUÁRIO</h2>
+          <button id="change-photo" class=" hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Mudar Foto</button>
+      </div>
+      
+        </div>
+
+      <div class="grid gap-10">
+        <div class="w-[30vw] h-20 border-4 border-[#CDB9B9]-500/100 flex items-center pl-5 text-white text-xl">usuario@gmail.com</div>
+        <div class="w-[30vw] h-20 border-4 border-[#CDB9B9]-500/100 flex items-center pl-5 text-white text-xl">***************</div>
+      </div>
+      
+        
+        <div class="flex gap-10">
+          <a class="bg-[#D9D9D9] w-32 h-12 flex items-center justify-center rounded-lg" href="./login.html">SAIR</a>
+          <a class="bg-[#D9D9D9] w-32 h-12 flex items-center justify-center rounded-lg" href="">DELETAR</a>
+        </div>
+  
+
+   
+      
 
     </main>
     
